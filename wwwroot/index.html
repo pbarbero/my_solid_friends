@@ -4,30 +4,70 @@
   <meta charset="utf-8">
   <title>SOLID DEMO</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <h1>SOLID DEMO</h1>
-    <p id="login">
-      You are not logged in.
-      <button>Log in</button>
-    </p>
-    <p id="logout">
-      You are logged in as <span id="user"></span>.
-      <button>Log out</button>
-    </p>
-    <p>
-      <label for="profile">Profile:</label>
-      <input id="profile">
-      <button id="view">View</button>
-    </p>
-    <dl id="viewer">
-      <dt>Full name</dt>
-      <dd id="fullName"></dd>
-      <dt>Friends</dt>
-      <dd>
-        <ul id="friends"></ul>
-      </dd>
-    </dl>
+    <div class="form-group">
+      <div class="row">
+        <div id="login" class="jumbotron col-md-12 bg-dark text-white">          
+        <h1 class="display-4">
+            <img src="img/solid-logo.png" height="42" width="42">
+            SOLID DEMO
+        </h1>
+        <p class="lead">
+        You are not logged in. So....???
+        </p>
+        <button type="button" style="float:right" class="btn btn-primary">Log in</button>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div id="logout" class="jumbotron col-md-12">
+            <h1 class="display-4">
+                <img src="img/solid-logo.png" height="42" width="42">
+                SOLID DEMO
+            </h1>
+            <p class="lead">
+                You are logged in as <a id="user" href="#"></a>
+            </p>
+            <hr class="my-4">
+            Let's see what you can do!
+          <button type="button" style="float:right;" class="btn btn-danger">Log out</button>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div id="solid-details" class="form-group">
+      <div class="row">
+        <h3>Profile</h3>
+      </div>
+      <br/>
+      <div class="row">
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+          </div>
+          <input id="profile">
+          <button type="button" class="btn btn-primary" id="view">View</button>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-md-6">
+            <div id="user-card" class="card" style="width: 18rem;" hidden>
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Full name</h5>
+                  <p id="fullName" class="card-text"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" style="text-align:left;">
+            <h3>Friends</h3>
+            <ul id="friends"></ul>
+        </div>
+      </div>
+    </div>
+    
   <script src="scripts/jquery-3.4.1.min.js"></script>
   <script src="scripts/solid-auth-client.bundle.js"></script>
   <script src="scripts/rdflib.min.js"></script>

@@ -1,7 +1,7 @@
 // Log the user in on click
 const popupUri = 'popup.html';
 $('#login button').click(() => solid.auth.popupLogin({ popupUri }));
-$('#logout button').click(() => solid.auth.logout());
+$('#logout').click(() => solid.auth.logout() );
 
 // Update components to match the user's login status
 solid.auth.trackSession(session => {
@@ -11,9 +11,14 @@ solid.auth.trackSession(session => {
   $('#user').text(session && session.webId);
 
   if (session) {
-    $('#user').text(session.webId);
-    if (!$('#profile').val())
+    $("#user").attr("href", session.webId);
+    if (!$('#profile').val()){
       $('#profile').val(session.webId);
+    }
+    $("#solid-details").show();
+  }
+  else {
+    $("#solid-details").hide();
   }
 });
 
@@ -30,6 +35,12 @@ $('#view').click(async function loadProfile() {
   // Display their details
   const fullName = store.any($rdf.sym(person), FOAF('name'));
   $('#fullName').text(fullName && fullName.value);
+  $("#user-card").removeAttr("hidden");
+  $("#user-card").fadeIn(300);
+
+  //Display the img
+  // let picture = store.any(me, VCARD('hasPhoto')) || store.any(me, FOAF(image));
+  // console.log(picture);
 
   // Display their friends
   const friends = store.each($rdf.sym(person), FOAF('knows'));

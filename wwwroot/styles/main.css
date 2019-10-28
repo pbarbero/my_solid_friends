@@ -1,8 +1,9 @@
 body {
-    max-width: 800px;
-    margin: 0 auto;
+    padding-left:20%;
+    padding-right:20%;
+    padding-top:10%;
   }
   
-  body, input {
-    font: 11pt/1.3 "Helvetiva Neue", Helvetica, Arial, sans-serif;
-  }
+.login {
+  margin-right: 10%;
+}
