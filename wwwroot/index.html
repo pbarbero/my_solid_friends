@@ -2,26 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Profile Viewer</title>
+  <title>SOLID DEMO</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <h1>Profile viewer</h1>
-  <p id="login">
-    You are not logged in.
-    <button>Log in</button>
-  </p>
-  <p id="logout">
-    You are logged in as <span id="user"></span>.
-    <button>Log out</button>
-  </p>
-  <p>
-    <label for="profile">Profile:</label>
-    <input id="profile">
-    <button id="view">View</button>
-  </p>
-  <script src="scripts/jquery.js"></script>
+    <h1>SOLID DEMO</h1>
+    <p id="login">
+      You are not logged in.
+      <button>Log in</button>
+    </p>
+    <p id="logout">
+      You are logged in as <span id="user"></span>.
+      <button>Log out</button>
+    </p>
+    <p>
+      <label for="profile">Profile:</label>
+      <input id="profile">
+      <button id="view">View</button>
+    </p>
+    <dl id="viewer">
+      <dt>Full name</dt>
+      <dd id="fullName"></dd>
+      <dt>Friends</dt>
+      <dd>
+        <ul id="friends"></ul>
+      </dd>
+    </dl>
+  <script src="scripts/jquery-3.4.1.min.js"></script>
   <script src="scripts/solid-auth-client.bundle.js"></script>
+  <script src="scripts/rdflib.min.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>

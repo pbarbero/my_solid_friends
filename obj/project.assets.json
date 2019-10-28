@@ -6003,7 +6003,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
-      "sha512": "spsJkYo8gGJapaxTSQFN/wqA+ghpJMLwB4ZyTB+fSdpd7AmMFP/YSpIcGmczcw4KggpxLGhLk7lCkSIlgvHaqQ==",
+      "sha512": "3phHFN5lXktB6Id1D0tvojf9GohSyoTwCadVZmCeKEDVj2u2xR3hLtj+lf9mpmCC5FuLbcyVjepZgFFHazHjIA==",
       "type": "package",
       "path": "microsoft.extensions.caching.abstractions/2.2.0",
       "files": [
@@ -6016,7 +6016,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Memory/2.2.0": {
-      "sha512": "yFs44RzB2Pzfoj4uk+mEz3MTTQKyeWb8gDhv5GyVPfHnLv0eQhGwzbw/5WpxAcVyOgG/H3/0ULY6g0/7/B+r7w==",
+      "sha512": "dPJ4f6vOg9WdgWyrMMU5rRhOyQ7DxM7Ivxx8z80NeF2Xygi9g51MuxMOaZwxNClDcxvJ6ZsPKBH61B54LrnYRA==",
       "type": "package",
       "path": "microsoft.extensions.caching.memory/2.2.0",
       "files": [
@@ -6042,7 +6042,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration/2.2.0": {
-      "sha512": "nOP8R1mVb/6mZtm2qgAJXn/LFm/2kMjHDAg/QJLFG6CuWYJtaD3p1BwQhufBVvRzL9ceJ/xF0SQ0qsI2GkDQAA==",
+      "sha512": "Be1LEgclOQthHN7tksm79bGbXNJ0yuewEBiIzPSePwDwt2AGqLLx5iXv6BfjVZGztxKQCngz+X8IRw/kOz+CwA==",
       "type": "package",
       "path": "microsoft.extensions.configuration/2.2.0",
       "files": [
@@ -6055,7 +6055,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
-      "sha512": "65MrmXCziWaQFrI0UHkQbesrX5wTwf9XPjY5yFm/VkgJKFJ5gqvXRoXjIZcf2wLi5ZlwGz/oMYfyURVCWbM5iw==",
+      "sha512": "HT/cMUOHvJ29Z5VIlWp6Zd1F63k5CbpGisNk8ayP35GwKwX5IDsJL8hWMoBesz5WPK8ZfW4f47kyVAhfCD/PAw==",
       "type": "package",
       "path": "microsoft.extensions.configuration.abstractions/2.2.0",
       "files": [
@@ -6068,7 +6068,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Binder/2.2.0": {
-      "sha512": "vJ9xvOZCnUAIHcGC3SU35r3HKmHTVIeHzo6u/qzlHAqD8m6xv92MLin4oJntTvkpKxVX3vI1GFFkIQtU3AdlsQ==",
+      "sha512": "MsSglnpg/8FoukGJ5CBKFxs2enCwrRd3ORx8bmhe3PHekeJeUzqhkQoOaAqyAt9wcF+myRTe1JcHLul4zj+zPA==",
       "type": "package",
       "path": "microsoft.extensions.configuration.binder/2.2.0",
       "files": [
@@ -6204,7 +6204,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/2.2.0": {
-      "sha512": "f9hstgjVmr6rmrfGSpfsVOl2irKAgr1QjrSi3FgnS7kulxband50f2brRLwySAQTADPZeTdow0mpSMcoAdadCw==",
+      "sha512": "YZcHF0/+XeKv12ZEo+OmrAa6rNayjye0qvEjYSDIhN99StqxnS2gZpwkcCrH/8JuXxzzcDSVpZw5Bruz8xYfXQ==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection.abstractions/2.2.0",
       "files": [
@@ -6438,7 +6438,7 @@
       ]
     },
     "Microsoft.Extensions.Logging/2.2.0": {
-      "sha512": "Nxqhadc9FCmFHzU+fz3oc8sFlE6IadViYg8dfUdGzJZ2JUxnCsRghBhhOWdM4B2zSZqEc+0BjliBh/oNdRZuig==",
+      "sha512": "K90QPI39Sq4mNb0Femo/xV/YGj8KHpAOyqEqChloxteM021SAnFV+kxjUKMJqrvpTcMJiGPmv1Yj03QeiXatRg==",
       "type": "package",
       "path": "microsoft.extensions.logging/2.2.0",
       "files": [
@@ -6451,7 +6451,7 @@
       ]
     },
     "Microsoft.Extensions.Logging.Abstractions/2.2.0": {
-      "sha512": "B2WqEox8o+4KUOpL7rZPyh6qYjik8tHi2tN8Z9jZkHzED8ElYgZa/h6K+xliB435SqUcWT290Fr2aa8BtZjn8A==",
+      "sha512": "9/ERS0/w8MRdWYC9Nv230+2DIYbCv+jr5JwlVyFXrNRerKN9mHShlSfCUjq2S9Wa8ORsztbe5Txz2CuA8pr2bA==",
       "type": "package",
       "path": "microsoft.extensions.logging.abstractions/2.2.0",
       "files": [
@@ -6542,7 +6542,7 @@
       ]
     },
     "Microsoft.Extensions.Options/2.2.0": {
-      "sha512": "UpZLNLBpIZ0GTebShui7xXYh6DmBHjWM8NxGxZbdQh/bPZ5e6YswqI+bru6BnEL5eWiOdodsXtEz3FROcgi/qg==",
+      "sha512": "onhaA2X0DkQmyybJhbTHO+63NnO90nIPHTC9a+1QLTM1hT934DM80OvgwKubEIQuPyvSHD6X1Q01PSTJRNHo8w==",
       "type": "package",
       "path": "microsoft.extensions.options/2.2.0",
       "files": [
@@ -6581,7 +6581,7 @@
       ]
     },
     "Microsoft.Extensions.Primitives/2.2.0": {
-      "sha512": "azyQtqbm4fSaDzZHD/J+V6oWMFaf2tWP4WEGIYePLCMw3+b2RQdj9ybgbQyjCshcitQKQ4lEDOZjmSlTTrHxUg==",
+      "sha512": "vpH+o7f8obVx65PiEtBXxTwL5RosK60fNIMy/y8WGE4/r4IvAqQGukOzMhxsp//Accvd7kmukyQTVkqVYdaDyA==",
       "type": "package",
       "path": "microsoft.extensions.primitives/2.2.0",
       "files": [
@@ -6633,7 +6633,7 @@
       ]
     },
     "Microsoft.IdentityModel.Logging/5.3.0": {
-      "sha512": "o+bBauEMOi6ZI0MlJEC69Sw9UPwKLFmN+lD942g9UCx5pfiLFvJBKp8OPmxtGFL02ZxzXCIUyhyKn85izBDsnQ==",
+      "sha512": "y2Hu8ypzoZbyxJiU2LQHkkCUjl5H1oAVapRbEQBbhrUe7hG2g8t+1Hb3NAhmM1SqStd71+rZR27TWv2mc6Isfw==",
       "type": "package",
       "path": "microsoft.identitymodel.logging/5.3.0",
       "files": [
@@ -6659,7 +6659,7 @@
       ]
     },
     "Microsoft.IdentityModel.Protocols/5.3.0": {
-      "sha512": "o2Fx9cYQHKtOyVrCXB41kEmny1Zvm+fqXNTD5heB9yPY0C+qYm7fo1yCvtHaH2JPEersGW0iS2dE0s65kWkVEw==",
+      "sha512": "iShjoAAXZ1Vw11IGV7nDrTqzFBZZ3h46WjS3hR1eHaoR2tOJqmQiS10chh8I4lw4pYw4z7mkLKlBME2XzrW+Wg==",
       "type": "package",
       "path": "microsoft.identitymodel.protocols/5.3.0",
       "files": [
@@ -6711,7 +6711,7 @@
       ]
     },
     "Microsoft.IdentityModel.Protocols.WsFederation/5.3.0": {
-      "sha512": "6nGUoC+foCQ2UTsRD/Z6TLgsghuX10tunLXxuLE+LljW9H1oANqAQWrP8DNP++nfXke+qu1zVi6yBl6MMK/Dfg==",
+      "sha512": "/+nBk8nA+POWAQIEsruAfa9DCu5VxJ3CMF6YA+TAMfSBG7W9gXELCA+0PGHkBxFEepBZ9vIAYcXcphpxKDuMbw==",
       "type": "package",
       "path": "microsoft.identitymodel.protocols.wsfederation/5.3.0",
       "files": [
@@ -6737,7 +6737,7 @@
       ]
     },
     "Microsoft.IdentityModel.Tokens/5.3.0": {
-      "sha512": "/piauST4FL0qzVI6oqLWxqhFReg12KwVGy0jRlnVOpGMeOVSKdtNVtHsN/hARc25hOOPEp9WKMce5ILzyMx/tQ==",
+      "sha512": "g+JFqRJcMv8gRdyIgaloL9Rk8iLJLGdCuLVcg84/W5vfGq9WWHF9DHmcyxO7Ac1fdm2Q3PmY/nvUhsOhB3TwXA==",
       "type": "package",
       "path": "microsoft.identitymodel.tokens/5.3.0",
       "files": [
@@ -6763,7 +6763,7 @@
       ]
     },
     "Microsoft.IdentityModel.Tokens.Saml/5.3.0": {
-      "sha512": "XS6zgN7jKG7QDqG3fV9BRADs8HmRJ6vJDKVBPFFly9MCkS6KMFps4hBdBJ5ycPrXtPBfnISCLiGLHP54blCvWw==",
+      "sha512": "oB5lgHAk86hhf9WSyRIa6cX1xlgleVmfizV93edo9bxUtpK5NSRI/HC6gynn9sk8/CSdFzG/473N4ktsFl5yBw==",
       "type": "package",
       "path": "microsoft.identitymodel.tokens.saml/5.3.0",
       "files": [
@@ -6789,7 +6789,7 @@
       ]
     },
     "Microsoft.IdentityModel.Xml/5.3.0": {
-      "sha512": "i4uFRjipeRXGhyfHmJaZ3PkOQIWhwxBJABNDWNaxcwUvramMCWYRLE1P3g4sLjiw8zXehH6eZwxww8F+dB7/+g==",
+      "sha512": "yS0ozQvm5yzjAo15jfzgfFnFfqLwpLQbnjkU8X8tlJM+PpddMAQnhObRQWH+h7r/Ff11SiaQo6CumEp1Ogw2+Q==",
       "type": "package",
       "path": "microsoft.identitymodel.xml/5.3.0",
       "files": [
@@ -12081,11 +12081,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\g3\\Personal\\solid_demo\\solid_demo.csproj",
+      "projectUniqueName": "C:\\Users\\g3\\Personal\\solid_demo\\solid_demo.csproj",
       "projectName": "solid_demo",
-      "projectPath": "c:\\Users\\g3\\Personal\\solid_demo\\solid_demo.csproj",
+      "projectPath": "C:\\Users\\g3\\Personal\\solid_demo\\solid_demo.csproj",
       "packagesPath": "C:\\Users\\g3\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\g3\\Personal\\solid_demo\\obj\\",
+      "outputPath": "C:\\Users\\g3\\Personal\\solid_demo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12100,7 +12100,8 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.vueling.com/nuget": {}
+        "https://nuget.vueling.com/nuget": {},
+        "https://pkgs.dev.azure.com/vueling/_packaging/vy-nuget/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
