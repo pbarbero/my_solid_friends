@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <div class="form-group">
+    <div class="form-group" id="cardLogin">
       <div class="row">
         <div id="login" class="jumbotron col-md-12 bg-dark text-white">          
         <h1 class="display-4">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group" id="cardContent">
       <div class="row">
         <div id="logout" class="jumbotron col-md-12">
             <h1 class="display-4">
@@ -51,19 +51,35 @@
           <button type="button" class="btn btn-primary" id="view">View</button>
       </div>
       <br/>
-      <div class="row">
-        <div class="col-md-6">
-            <div id="user-card" class="card" style="width: 18rem;" hidden>
-                <img src="..." class="card-img-top" alt="...">
+      <div id="userDetails" style="display: none;">
+        <div class="row" style="margin-top: 10%;">
+          <div class="col-md-6">
+            <h2>Me</h2>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+              <h2>My friends</h2>
+          </div>
+        </div>
+        <br/>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="user-card" class="card">
+                <img id="user-img" src="..." class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title">Full name</h5>
                   <p id="fullName" class="card-text"></p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6" style="text-align:left;">
-            <h3>Friends</h3>
-            <ul id="friends"></ul>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-4" style="text-align:left;">
+            <div id="friends-card">
+              <div id="friends">
+                  <!--stuff here-->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

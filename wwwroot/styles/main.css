@@ -1,9 +1,16 @@
 body {
     padding-left:20%;
     padding-right:20%;
-    padding-top:10%;
   }
   
 .login {
   margin-right: 10%;
+}
+
+#cardLogin {
+  padding-top:10%;
+}
+
+#profile {
+  width:70%;
 }
