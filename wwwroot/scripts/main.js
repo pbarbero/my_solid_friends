@@ -38,14 +38,43 @@ $('#view').click(async function loadProfile() {
   let me = $rdf.sym(person);
 
   showUserDetails(store, me);
+  $("#myTabContent").fadeIn(300);
+  $("#userTabs").fadeIn(300);
+});
+
+$("#showFriends").click(async function loadFriends(){  
+  const store = $rdf.graph();
+  const fetcher = new $rdf.Fetcher(store);
+
+  // Load the person's data into the store
+  const person = $('#profile').val();
+  await fetcher.load(person);
+  let me = $rdf.sym(person);
   showUserFriends(store, me, fetcher);
 });
 
+$("#addFriend").click(async function addFriend(){
+  const person = $('#profile').val();
+  const store = $rdf.graph();  
+  const updater = new $rdf.UpdateManager(store);
+  const fetcher = new $rdf.Fetcher(store);
+  await fetcher.load(person);
+  let me = $rdf.sym(person);
+  const friend = $('#newFriend').val().trim();
+  let ins = $rdf.st(me, FOAF('knows'), $rdf.sym(friend), me.doc());
+  let del = [];
+  updater.update(del, ins, (uri, ok, message) => {
+    console.log(uri);
+    if (ok)
+      alert("We're friends now!");
+    else
+      alert(message);
+  });
+});
 
 function showUserDetails(store, me){
   const fullName = store.any(me, FOAF('name'));
   $('#fullName').text(fullName && fullName.value);
-  $("#userDetails").fadeIn(300);
 
   //Display the img
   let picture = getImage(store, me);
@@ -53,7 +82,11 @@ function showUserDetails(store, me){
 }
 
 function getImage(store, me){  
-  return store.any(me, VCARD('hasPhoto')) || store.any(me, FOAF('image'));
+  var vcardPhoto = store.any(me, VCARD('hasPhoto'));
+  if(vcardPhoto !== undefined)
+    return  vcardPhoto;
+
+  return store.any(me, FOAF('image'));
 }
 
 function showUserFriends(store, me, fetcher){
@@ -67,11 +100,11 @@ function showUserFriends(store, me, fetcher){
     let image = getImage(store, friend);
 
     const fullName = store.any(friend, FOAF('name'));
-    $('#friends').append(addFriend(fullName, image, urlFriend));
+    $('#friends').append(appendFriend(fullName, image, urlFriend));
   });
 }
 
-function addFriend(fullName, image, urlFriend){
+function appendFriend(fullName, image, urlFriend){
   if(image === undefined){
     image = "https://picsum.photos/200/200";
   }  
@@ -81,11 +114,38 @@ function addFriend(fullName, image, urlFriend){
 
   return $('<dt>').append(
     "<div id='user-card' class='card' style='width: 18rem;' >" + 
-    "<img src='" + image + "' class='card-img-top'>" + 
-    "<div class='card-body'>" + 
-    "<h5 class='card-title'>" +fullName +"</h5>" + 
-      "  <a href='" + urlFriend +"' class='card-text'>"+ urlFriend+ "</a>" + 
-    " </div>" + 
+      "<img src='" + image + "' class='card-img-top'>" + 
+      "<button type='button' class='btn btn-dange' onclick='removeFriend(this)'></button>" + 
+      "<div class='card-body'>" + 
+      "<h5 class='card-title'>" +fullName +"</h5>" + 
+        "  <a href='" + urlFriend +"' class='card-text'>"+ urlFriend+ "</a>" + 
+      " </div>" + 
     "</div>"
     );
+}
+
+function removeFriend(buttonDeleteFriend) {
+	solid.auth.trackSession(async session => {
+		const store = $rdf.graph();
+		const fetcher = new $rdf.Fetcher(store);
+		const updater = new $rdf.UpdateManager(store);
+		
+		const friend = $(buttonDeleteFriend).closest("webId");
+		if (friend.length == 0)
+			return;
+		
+		const myid = session.webId;
+		
+		const me = $rdf.sym(myid);
+		const profile = me.doc();
+		
+		let ins = [];
+		let del = store.statementsMatching(me, FOAF('knows'), $rdf.sym(friend), profile);
+		updater.update(del, ins, (uri, ok, message) => {
+			if (ok)
+				alert('friend deleted');
+			else
+				alert(message);
+		});
+	});
 }
