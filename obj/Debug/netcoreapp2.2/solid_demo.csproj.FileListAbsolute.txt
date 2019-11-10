@@ -4,7 +4,6 @@ C:\Users\g3\Personal\solid_demo\bin\Debug\netcoreapp2.2\solid_demo.runtimeconfig
 C:\Users\g3\Personal\solid_demo\bin\Debug\netcoreapp2.2\solid_demo.dll
 C:\Users\g3\Personal\solid_demo\bin\Debug\netcoreapp2.2\solid_demo.pdb
 C:\Users\g3\Personal\solid_demo\obj\Debug\netcoreapp2.2\solid_demo.csprojAssemblyReference.cache
-C:\Users\g3\Personal\solid_demo\obj\Debug\netcoreapp2.2\solid_demo.csproj.CoreCompileInputs.cache
 C:\Users\g3\Personal\solid_demo\obj\Debug\netcoreapp2.2\solid_demo.RazorAssemblyInfo.cache
 C:\Users\g3\Personal\solid_demo\obj\Debug\netcoreapp2.2\solid_demo.RazorAssemblyInfo.cs
 C:\Users\g3\Personal\solid_demo\obj\Debug\netcoreapp2.2\solid_demo.AssemblyInfoInputs.cache
@@ -12,3 +11,7 @@ C:\Users\g3\Personal\solid_demo\obj\Debug\netcoreapp2.2\solid_demo.AssemblyInfo.
 C:\Users\g3\Personal\solid_demo\obj\Debug\netcoreapp2.2\solid_demo.RazorTargetAssemblyInfo.cache
 C:\Users\g3\Personal\solid_demo\obj\Debug\netcoreapp2.2\solid_demo.dll
 C:\Users\g3\Personal\solid_demo\obj\Debug\netcoreapp2.2\solid_demo.pdb
+C:\Users\g3\Personal\solid_demo\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\g3\Personal\solid_demo\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\g3\Personal\solid_demo\bin\Debug\netcoreapp2.2\package-lock.json
+C:\Users\g3\Personal\solid_demo\bin\Debug\netcoreapp2.2\Properties\launchSettings.json

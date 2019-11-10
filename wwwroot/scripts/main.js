@@ -1,7 +1,12 @@
 // Log the user in on click
 const popupUri = 'popup.html';
 $('#login button').click(() => solid.auth.popupLogin({ popupUri }));
-$('#logout').click(() => solid.auth.logout() );
+$('#btnLogout').click(async function() {
+  solid.auth.logout();
+  localStorage.removeItem("solid-auth-client");
+  $("#profile").val("");
+ }
+);
 
 // Update components to match the user's login status
 solid.auth.trackSession(session => {
@@ -124,13 +129,13 @@ function appendFriend(fullName, image, urlFriend){
     );
 }
 
-function removeFriend(buttonDeleteFriend) {
+function removeFriend(friendId) {
 	solid.auth.trackSession(async session => {
 		const store = $rdf.graph();
 		const fetcher = new $rdf.Fetcher(store);
 		const updater = new $rdf.UpdateManager(store);
 		
-		const friend = $(buttonDeleteFriend).closest("webId");
+		const friend = friendId;
 		if (friend.length == 0)
 			return;
 		
