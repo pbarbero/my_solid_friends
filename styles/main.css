@@ -22,3 +22,12 @@ body {
 .tabContent{
   margin:5%;
 }
+
+.card-title{
+  display: inline;
+}
+
+.fa-user-times{
+  color:red;
+  vertical-align: text-top;
+}

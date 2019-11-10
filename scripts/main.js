@@ -21,6 +21,7 @@ solid.auth.trackSession(session => {
       $('#profile').val(session.webId);
     }
     $("#solid-details").show();
+    $("#view").show();
     $("#cardLogin").hide();
   }
   else {
@@ -99,7 +100,11 @@ function showUserFriends(store, me, fetcher){
   $('#friends').empty();
 
   friends.forEach(async (urlName) => {
-    var urlFriend = urlName.value + "#me";
+    var urlFriend = urlName.value;
+
+    if(!urlFriend.endsWith("#me")) {
+      urlFriend = urlName.value + "#me";
+    }
     await fetcher.load(urlFriend);
     let friend = $rdf.sym(urlFriend);
     let image = getImage(store, friend);
@@ -120,9 +125,9 @@ function appendFriend(fullName, image, urlFriend){
   return $('<dt>').append(
     "<div id='user-card' class='card' style='width: 18rem;' >" + 
       "<img src='" + image + "' class='card-img-top'>" + 
-      "<button type='button' class='btn btn-dange' onclick='removeFriend(this)'></button>" + 
       "<div class='card-body'>" + 
       "<h5 class='card-title'>" +fullName +"</h5>" + 
+        "<button type='button' class='btn btn-dange' onclick='removeFriend(this)'><i class='fas fa-user-times'></i></button>" + 
         "  <a href='" + urlFriend +"' class='card-text'>"+ urlFriend+ "</a>" + 
       " </div>" + 
     "</div>"
@@ -135,7 +140,7 @@ function removeFriend(friendId) {
 		const fetcher = new $rdf.Fetcher(store);
 		const updater = new $rdf.UpdateManager(store);
 		
-		const friend = friendId;
+		const friend = $(friendId).siblings("a").attr("href");
 		if (friend.length == 0)
 			return;
 		
