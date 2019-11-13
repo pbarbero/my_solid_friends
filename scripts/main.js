@@ -1,10 +1,12 @@
+const FOAF = $rdf.Namespace('http://xmlns.com/foaf/0.1/'); //vocabulary
+const VCARD = new $rdf.Namespace('http://www.w3.org/2006/vcard/ns#'); //ontology
+
 // Log the user in on click
 const popupUri = 'popup.html';
 $('#login button').click(() => solid.auth.popupLogin({ popupUri }));
 $('#btnLogout').click(async function() {
   solid.auth.logout();
-  localStorage.removeItem("solid-auth-client");
-  $("#profile").val("");
+  hidePersonalPod();
  }
 );
 
@@ -16,22 +18,12 @@ solid.auth.trackSession(session => {
   $('#user').text(session && session.webId);
 
   if (session) {
-    $("#user").attr("href", session.webId);
-    if (!$('#profile').val()){
-      $('#profile').val(session.webId);
-    }
-    $("#solid-details").show();
-    $("#view").show();
-    $("#cardLogin").hide();
+    showPersonalPod(session.webId)
   }
   else {
-    $("#solid-details").hide();
-    $("#cardLogin").show();
+    hidePersonalPod();
   }
 });
-
-const FOAF = $rdf.Namespace('http://xmlns.com/foaf/0.1/');
-const VCARD = new $rdf.Namespace('http://www.w3.org/2006/vcard/ns#');
 
 $('#view').click(async function loadProfile() {
   // Set up a local data store and associated data fetcher
@@ -80,6 +72,8 @@ $("#addFriend").click(async function addFriend(){
 
 function showUserDetails(store, me){
   const fullName = store.any(me, FOAF('name'));
+  var status = store.any(me, FOAF('phone'));
+  console.log(status);
   $('#fullName').text(fullName && fullName.value);
 
   //Display the img
@@ -137,10 +131,10 @@ function appendFriend(fullName, image, urlFriend){
 function removeFriend(friendId) {
 	solid.auth.trackSession(async session => {
 		const store = $rdf.graph();
-		const fetcher = new $rdf.Fetcher(store);
+		// const fetcher = new $rdf.Fetcher(store);
 		const updater = new $rdf.UpdateManager(store);
 		
-		const friend = $(friendId).siblings("a").attr("href");
+		var friend = $(friendId).siblings("a").attr("href");
 		if (friend.length == 0)
 			return;
 		
@@ -158,4 +152,22 @@ function removeFriend(friendId) {
 				alert(message);
 		});
 	});
+}
+
+function showPersonalPod(sessionWebId){
+  $("#user").attr("href", sessionWebId);
+    if (!$('#profile').val()){
+      $('#profile').val(sessionWebId);
+    }
+    $("#solid-details").show();
+    $("#view").show();
+    $("#cardLogin").hide();
+}
+
+function hidePersonalPod(){
+  localStorage.removeItem("solid-auth-client");
+  $("#solid-details").hide();
+  $("#cardLogin").show();
+  $("#view").hide();
+  $("#profile").val("");
 }
